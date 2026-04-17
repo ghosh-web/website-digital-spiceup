@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- favicon -->
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <!-- font awsome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+<nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#"> <img src="./img/digital-spiceup.webp" alt="Digital Spice Up Logo" class="me-2"></a>
+
+    
+    <button
+      class="navbar-toggler"
+      type="button"
+      onclick="showSideBar()"
+    >
+      ☰
+    </button>
+
+    <div class="collapse navbar-collapse d-none d-lg-block">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="web.html">Web Development</a></li>
+            <li><a class="dropdown-item" href="software.html">Software Development</a></li>
+            <li><a class="dropdown-item" href="ui.html">UI/UX Design</a></li>
+            <li><a class="dropdown-item" href="app.html">Mobile App Development</a></li>
+            <li><a class="dropdown-item" href="performance.html">Performance Marketing</a></li>
+            <li><a class="dropdown-item" href="seo.html">Search Engine Optimization</a></li>
+            <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="casestudy.html">Case Study</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-btn  ms-lg-3" href="contact.html">Let’s Chat</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="sidebarOverlay" class="sidebar-overlay d-none">
+  <div id="sidebar" class="sidebar">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <span class="fs-4 fw-bold text-primary">Digital Spice Up</span>
+      <button class="btn btn-sm btn-outline-secondary" onclick="closeSidebar()">✖</button>
+    </div>
+
+    <ul class="list-unstyled">
+      <li class="menu-item"><a href="index.html">Home</a></li>
+      <li class="menu-item"><a href="about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleServices()">Services ▸</li>
+      <ul id="serviceMenu" class="list-unstyled submenu d-none">
+    <li><a class="dropdown-item" href="web.html">Web Development</a></li>
+            <li><a class="dropdown-item" href="software.html">Software Development</a></li>
+            <li><a class="dropdown-item" href="ui.html">UI/UX Design</a></li>
+            <li><a class="dropdown-item" href="app.html">Mobile App Development</a></li>
+            <li><a class="dropdown-item" href="performance.html">Performance Marketing</a></li>
+            <li><a class="dropdown-item" href="seo.html">Search Engine Optimization</a></li>
+            <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="casestudy.html">Case Study</a></li>
+      <li class="menu-item"><a href="blog.html">Blog</a></li>
+      <li class="menu-item cta"><a href="contact.html">Let’s Chat</a></li>
+    </ul>
+
+  </div>
+</div>
+
+</header> 
+  <!-- nav end -->
+
+   <!-- loader start -->
+    <div class="loader-wrapper">
+  <div class="dot-loader">
+    <img src="./img/favicon.png" alt="">
+    <div class="dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- loader end -->
+
+  <!-- banner start -->
+  <section class="ap-banner"
+    style=" position: relative; width: 100%; height: 450px; overflow: hidden; background-size: contain;">
+    <div style="width: 100%; height: 100%; position: relative;">
+      <video autoplay muted loop playsinline
+        style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%);">
+        <source src="./assets/video/mobileappv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="ap-content" >
+        <h1 >Mobile Application Development
+        </h1>
+        <p>From idea to innovation – we make mobile magic happen</p>
+      </div>
+    </div>
+  </section>
+  <!-- banner end -->
+
+  <!-- mobile-about start -->
+
+  <section class="mobile-app section_padding">
+    <div class="container">
+      <div class="mobile-head text-center">
+        <h2>From Concept <span class="typing-text">To Code — We Build</span> What Matters</h2>
+        <p>We build mobile apps that drive measurable business growth, turning every tap into a meaningful user
+          experience.
+          Our development process blends innovation with precision, ensuring your app delivers maximum performance and
+          ROI.
+          Through data-driven design and seamless functionality, we transform your vision into an app that fuels
+          sustainable success for your brand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- mobile-about end -->
+
+  <!-- technology start -->
+
+  <section class="section1 section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="pricing-title">
+
+            <h2> Tools and Technologis We Use</h2>
+          </div>
+        </div>
+      </div>
+      <div class="tab-container">
+        <div class="tab-menu">
+          <div class="tab-item active">
+            <i class="fa fa-code"></i> Frontend Programming Language
+            <!-- <span class="arrow">➔</span> -->
+          </div>
+          <div class="tab-item">
+            <i class="fa fa-cogs"></i> Backend Programming Language
+            <!-- <span class="arrow">➔</span> -->
+          </div>
+          <div class="tab-item">
+            <i class="fa fa-fire"></i> Framework
+            <!-- <span class="arrow">➔</span> -->
+          </div>
+          <div class="tab-item">
+            <i class="fa fa-database"></i> Databases / Data Storages
+            <!-- <span class="arrow">➔</span> -->
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active">
+            <div class="cards">
+              <img width="50" height="50" src="./img/flutter.svg" alt="css3" />
+              <p>Flutter</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/swift.svg" alt="html-5--v1" />
+              <p>Swift</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/kotlin.svg" alt="javascript--v1" />
+              <p>Kotlin</p>
+            </div>
+         
+            <div class="cards">
+              <img width="48" height="48" src="./img/atom.webp" alt="react-native" />
+              <p>React Native</p>
+            </div>
+          </div>
+          <div class="tab-pane">
+            <div class="cards">
+              <img width="48" height="48" src="./img/python.webp" alt="python--v1" />
+              <p>Python</p>
+            </div>
+            <div class="cards">
+              <img width="50" height="50" src="./img/nodejs.png" alt="node-js" />
+              <p>Node.js</p>
+            </div>
+            <div class="cards">
+              <img width="50" height="50" src="./img/java.png" alt="java-coffee-cup-logo" />
+              <p>Java</p>
+            </div>
+            <div class="cards">
+              <img width="50" height="50" src="./img/php.webp" alt="php-logo" />
+              <p>PHP</p>
+            </div>
+          </div>
+          <div class="tab-pane">
+            <div class="cards">
+              <img width="48" height="48" src="./img/laravel.png" alt="laravel" />
+              <p>Laravel</p>
+            </div>
+            <div class="cards">
+              <img width="50" height="50" src="./img/codeigniter.webp" alt="codeigniter" />
+              <p>Codeigniter</p>
+            </div>
+            <div class="cards">
+              <img width="50" height="50" src="./img/circled-m-emoji.png" alt="circled-m-emoji" />
+              <p>MEAN</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/django.png" alt="django" />
+              <p>Django</p>
+            </div>
+          </div>
+          <div class="tab-pane">
+            <div class="cards">
+              <img width="48" height="48" src="./img/microsoft-sql-server.png" alt="microsoft-sql-server" />
+              <p>SQL Server</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/mysql-logo.png" alt="mysql-logo" />
+              <p>MySQL</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/mongo-db.png" alt="mongo-db" />
+              <p>MongoDB</p>
+            </div>
+            <div class="cards">
+              <img width="48" height="48" src="./img/firebase.png" alt="firebase" />
+              <p>Firebase</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- technology end -->
+
+  <!-- planning start -->
+
+  <section class="transform-section section_padding">
+    <div class="container">
+
+      <div class="transform-row">
+        <div class="transform-column">
+          <h5 class="thead">From Start To Finish</h5>
+
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Project Discussion
+              </h4>
+              <p>Once you register, we’ll refine your ideas together before development strategically aligned.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Wireframing & Designing</h4>
+              <p>Our design previews ensure you see exactly how your app will look and feel, with complete clarity.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Development Stage</h4>
+              <p>Your vision evolves into a robust, high-performing digital product with us, from concept to launch.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Testing & Quality Assurance</h4>
+              <p>Our advanced testing ensures quality, eliminating errors before moving ahead with confidence.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Service and Support</h4>
+              <p>We provide ongoing app support and maintenance after launch, delivering uninterrupted user experience.</p>
+            </div>
+          </div>
+
+          <!-- <button type="button" class="chat-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Explore now
+          </button> -->
+
+
+        </div>
+    <!-- Right Column -->
+        <div class="transform-column">
+          <div class="donations-container">
+            <div class="img-wrapper">
+              <img src="./img/appde.webp" alt="plan">
+            </div>
+            <div class="donations-img">
+              <img src="./img/ios.jpeg" alt="layout" class="secondary-image">
+              <img src="./img/appd.webp" alt="design" class="third-image">
+            </div>
+            <div class="testimonial-card-one">
+              <img src="./img/quotation.png" alt="quote">
+              <p>"Crafting responsive, user-friendly, and high-performing websites that bring your digital vision to
+                life."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- planning end -->
+
+  <!-- service -->
+
+  <section class="service-section section_padding">
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg">
+          <div class="pro-card">
+            <div class="pro-image-container">
+              <img src="./img/ui-design.png" alt="Hybrid App Development" class="pro-image">
+            </div>
+            <h5 class="profile-head">Hybrid App Development</h5>
+            <p class="profile-text py-2">
+              Hybrid app development blends native and web technologies for fast, affordable, cross-platform mobile
+              solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg">
+          <div class="pro-card stagger-effect">
+            <div class="pro-image-container">
+              <img src="./img/mobile-development (1).png" alt="Native App Development" class="pro-image">
+            </div>
+            <h5 class="profile-head">Native App Development</h5>
+            <p class="profile-text py-2">
+              Native app development ensures high performance, smooth experience, and complete integration for specific
+              platforms.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg">
+          <div class="pro-card">
+            <div class="pro-image-container">
+              <img src="./img/app-development (3).png" alt="Cross App Development" class="pro-image">
+            </div>
+            <h5 class="profile-head">Cross App Development</h5>
+            <p class="profile-text py-2">
+              Cross-platform app development allows code sharing, faster deployment, and reliable performance on
+              multiple devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg">
+          <div class="pro-card stagger-effect">
+            <div class="pro-image-container">
+              <img src="./img/android (1).png" alt="Android App Development" class="pro-image">
+            </div>
+            <h5 class="profile-head">Android App Development</h5>
+            <p class="profile-text py-2">
+              Android app development builds scalable, user-friendly applications optimized for smooth performance on
+              all devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg">
+          <div class="pro-card">
+            <div class="pro-image-container">
+              <img src="./img/iphone.png" alt="iOS App Development" class="pro-image">
+            </div>
+            <h5 class="profile-head">iOS App Development</h5>
+            <p class="profile-text py-2">
+              iOS app development creates secure, high-quality applications optimized for smooth performance across all
+              devices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end -->
+
+  <!-- testimonial -->
+<section class="testimonial section_padding">
+  <h4 class="text-center">Client Testimonial</h4>
+<div class="container">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                           <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Krafted Tales</h3>
+                    <p class="testimonial-date">8th August 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    We chose Digital Spice Up for website and software needs; their strategy, design, and support helped Krafted Tales scale effortlessly.
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Barsha Shilpayan</h3>
+                    <p class="testimonial-date">20th August 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    Digital Spice Up delivered a fast, beautiful website showcasing our sarees, delighting customers with quality, creativity, and performance.
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Kanchenjauga(View Point Homestay)</h3>
+                    <p class="testimonial-date">8th Oct 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    Professional team, seamless communication, and top-quality development gave our homestay a modern, guest-loved online presence.
+
+                    </p>
+
+                  </div>
+                </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Zero to 81</h3>
+                                <p class="testimonial-date">5th Nov 2024</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+    Digital Spice Up built our fast, modern e-commerce site and boosted revenue through effective performance marketing. Skilled, dedicated team.
+                                    
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Banglar Misti</h3>
+                                <p class="testimonial-date">3rd Dec 2024</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+   
+                                    Fantastic work by Digital Spice Up—great e-commerce for Banglar Misti, strong SEO marketing, increased brand reach, and steady business growth.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Chakraborty Security Agency</h3>
+                                <p class="testimonial-date">10th june 2025</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+     Digital Spice Up delivered an efficient website with strong SEO results. Responsive, knowledgeable team—truly dedicated and we’re very happy.
+                                    
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+  <!-- testimonial end -->
+
+  <!-- faq -->
+
+  <section class="faq-section section_padding">
+    <div class="container">
+      <div class="main-faq">
+
+        <div class="faq-question">
+          <h1 class="faq-title">Frequently Asked Questions</h1>
+
+          <div class="accordion" id="faqAccordion">
+
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne">
+                  1. What is digital marketing??
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Digital marketing is the promotion of products or services using digital channels such as search
+                  engines, social media, email, and websites to reach and engage a target audience.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo">
+                  2. Why is SEO important in digital marketing?
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  SEO improves a website’s visibility on search engines, drives organic traffic, builds credibility, and
+                  increases the chances of converting visitors into customers.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree">
+                  3. What is the difference between organic and paid digital marketing?
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Organic marketing focuses on free strategies like SEO and content marketing to attract audiences
+                  naturally, while paid marketing involves paid campaigns like Google Ads or social media ads to reach
+                  targeted audiences quickly.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour">
+                  4. How do social media platforms help in digital marketing?
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Social media platforms help businesses build brand awareness, engage with customers, run targeted ads,
+                  and drive traffic to websites or online stores
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive">
+                  5.How is the success of a digital marketing campaign measured?
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Success is measured using metrics such as website traffic, conversion rates, click-through rates
+                  (CTR), return on investment (ROI), engagement rate, and lead generation.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix">
+                  6. What is the role of content marketing in digital marketing?
+                  <i class="fas fa-plus"></i><i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Content marketing focuses on creating and sharing valuable content (blogs, videos, infographics) to
+                  attract, educate, and engage a target audience. It helps build trust, improve SEO, and generate leads
+                  over time.
+
+                  If you want, I can make a full set of 10 digital marketing Q&A in a ready-to-use format for study or
+                  presentation. It will be clean and concise. Do you want me to do that?
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Side Image -->
+        <div class="image-section">
+          <div class="image-container">
+            <img src="./img/faq.webp" alt="FAQ image" id="faqImage">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- faq end -->
+
+ <!-- logo carousel -->
+   <section class="logo-carousel section_padding">
+    <h6 class="title">Our Work</h6>
+    <div class="logo-wrapper">
+      <div class="logo-track">
+       <a href="casestudy.html"><img src="./img/kraftedtales.png" alt="Krafted Tales duplicate"></a>
+          <a href="casestudy.html"><img src="./img/shilpakala-logo.webp" alt="" srcset=""></a>
+          <a href="casestudy.html"><img src="./img/shraddha.png" alt="Shraddha duplicate"></a>
+          <a href="casestudy.html"><img src="./img/barsha-silpayan.png" alt="Barsha Silpayan duplicate"></a>
+          <a href="casestudy.html"><img src="./img/kanchenjunga.png" alt="Kanchenjunga duplicate"></a>
+          <a href="casestudy.html"><img src="./img/annoor.png" alt="anoor"></a>
+          <a href="casestudy.html"><img src="./img/zeroto81.png" alt="zeroto81"></a>
+          <a href="casestudy.html"><img src="./img/banglar-misti-300x300 (1).png" alt="Banglar misti"></a>
+          <a href="casestudy.html"><img src="./img/warddrobe-logo.webp" alt="warddrobe"></a>
+          <a href="casestudy.html"><img src="./img/best-automation.webp" alt="Automation"></a>
+          <a href="casestudy.html"><img src="./img/CSA-logo.webp" alt="csa"></a>
+
+      </div>
+    </div>
+  </section>
+  <!-- logo end -->
+
+  <!-- footer start -->
+  <footer>
+    <section class="footer_section section_padding">
+      <div class="container">
+
+        <div class="row footer-row mt-5 align-items-stretch">
+
+          <div class="col-12 col-md-2 footer-col py-2">
+            <a href="#" class="footer-logo">
+              <img src="./img/digital-spiceup.webp" alt="Give Logo">
+            </a>
+            <p class="footer-tagline pb-2">
+              Empowering Brands with Digital Intelligence —
+              <span> Digital Spice Up </span> at your service.
+            </p>
+
+          
+            <a href="tel:  +91 90381 20150"><i class="fa-solid fa-phone"></i> +91 90381 20150</a>
+            <a href="mailto:info@digitalspiceup.com"><i class="fa-solid fa-message"></i>info@digitalspiceup.com</a>
+
+
+            <div class="footer-social-icons">
+              <div class="social-icon-group"><a href="https://www.facebook.com/profile.php?id=61552457402967"><i
+                    class="fab fa-facebook-f"></i></a></div>
+              <div class="social-icon-group"><a href="https://digitalspiceup.com/old-site/#"><i
+                    class="fa-brands fa-pinterest"></i></a></div>
+              <div class="social-icon-group"><a
+                  href="https://www.linkedin.com/company/digital-marketing-company-in-india-digital-spiceup/?viewAsMember=true"><i
+                    class="fab fa-twitter"></i></a></div>
+              <div class="social-icon-group"><a href="https://www.instagram.com/digitalspiceup/"><i
+                    class="fab fa-instagram"></i></a></div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 footer-col">
+            <h4 class="footer-heading ms-5">Quick Links</h4>
+            <ul class="footer-links ms-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="casestudy.html">Case Study</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6 col-md-3 footer-col">
+            <h4 class="footer-heading me-5">Services</h4>
+            <ul class="footer-links me-5">
+              <li><a href="web">Web Development</a></li>
+              <li><a href="app.html">App Development</a></li>
+              <li><a href="ui.html">UI/UX Design</a></li>
+              <li><a href="software.html">Software Development</a></li>
+              <li><a href="seo.html">Seo Marketing</a></li>
+              <li><a href="digital.html">Digital Marketing</a></li>
+              <li><a href="performance.html">Performance Marketing</a></li>
+
+            </ul>
+          </div>
+
+          <!-- Contact Form Right -->
+          <div class="col-12 col-md-4 footer-right d-flex flex-column justify-content-start">
+            <h4 class="text-white mb-3">Get in Touch</h4>
+
+            <form class="footer-contact-form w-100">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Phone" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="mb-3 flex-grow-1">
+                <textarea class="form-control h-100" rows="4" placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn text-dark w-100">Send</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- favicon -->
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+      <!-- font awsome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/ui.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+<!-- nav start -->
+
+ <header>
+<nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#"> <img src="./img/digital-spiceup.webp" alt="Digital Spice Up Logo" class="me-2"></a>
+
+    
+    <button
+      class="navbar-toggler"
+      type="button"
+      onclick="showSideBar()"
+    >
+      ☰
+    </button>
+
+    <div class="collapse navbar-collapse d-none d-lg-block">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="web.html">Web Development</a></li>
+            <li><a class="dropdown-item" href="software.html">Software Development</a></li>
+            <li><a class="dropdown-item" href="ui.html">UI/UX Design</a></li>
+            <li><a class="dropdown-item" href="app.html">Mobile App Development</a></li>
+            <li><a class="dropdown-item" href="performance.html">Performance Marketing</a></li>
+            <li><a class="dropdown-item" href="seo.html">Search Engine Optimization</a></li>
+            <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="casestudy.html">Case Study</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-btn ms-lg-3" href="contact.html">Let’s Chat</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="sidebarOverlay" class="sidebar-overlay d-none">
+  <div id="sidebar" class="sidebar">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <span class="fs-4 fw-bold text-primary">Digital Spice Up</span>
+      <button class="btn btn-sm btn-outline-secondary" onclick="closeSidebar()">✖</button>
+    </div>
+
+    <ul class="list-unstyled">
+      <li class="menu-item"><a href="index.html">Home</a></li>
+      <li class="menu-item"><a href="about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleServices()">Services ▸</li>
+      <ul id="serviceMenu" class="list-unstyled submenu d-none">
+   <li><a class="dropdown-item" href="web.html">Web Development</a></li>
+            <li><a class="dropdown-item" href="software.html">Software Development</a></li>
+            <li><a class="dropdown-item" href="ui.html">UI/UX Design</a></li>
+            <li><a class="dropdown-item" href="app.html">Mobile App Development</a></li>
+            <li><a class="dropdown-item" href="performance.html">Performance Marketing</a></li>
+            <li><a class="dropdown-item" href="seo.html">Search Engine Optimization</a></li>
+            <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="casestudy.html">Case Study</a></li>
+      <li class="menu-item"><a href="blog.html">Blog</a></li>
+      <li class="menu-item cta"><a href="contact.html">Let’s Chat</a></li>
+    </ul>
+
+  </div>
+</div>
+
+</header> 
+  <!-- nav end -->
+
+      <!-- loader start -->
+   <div class="loader-wrapper">
+  <div class="dot-loader">
+    <img src="./img/favicon.png" alt="">
+    <div class="dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+<!-- loader end -->
+  
+    <!-- banner start -->
+  <section class="u-banner"
+    style=" position: relative; width: 100%; height: 450px; overflow: hidden; background-size: contain;">
+    <div style="width: 100%; height: 100%; position: relative;">
+      <video autoplay muted loop playsinline
+        style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%);">
+        <source src="./assets/video/uiuxv.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="u-content">
+        <h1>UI/UX 
+        </h1>
+        <p>From concept to clicks – we craft experiences users love</p>
+      </div>
+    </div>
+  </section>
+  <!-- banner end -->
+
+<!-- ui/ux about start -->
+
+    <section class="uiux-app section_padding">
+        <div class="container">
+            <div class="uiux-head text-center">
+                <h2> Seamless <span class="typing-text">Experiences Thoughtfully</span> Crafted</h2>
+                <p>We craft intuitive UI/UX designs that elevate user engagement, transforming every interaction into a seamless and memorable experience.
+Our design process combines creativity with strategic precision, ensuring interfaces that are visually stunning and functionally effective.
+Through user-centered research and data-driven insights, we create experiences that strengthen your brand and drive measurable growth.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- ui/ux end -->
+
+<!-- design and development -->
+
+ <!-- planning start -->
+
+  <section class="transform-section section_padding">
+    <div class="container">
+
+      <div class="transform-row">
+        <div class="transform-column ">
+            <h5 class="thead">From Start To Finish</h5>
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Research
+              </h4>
+              <p>We collaborate to turn raw ideas into research-backed design strategies.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Define</h4>
+              <p>Experience your app’s flow and visuals before we write a single line of code.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Ideate</h4>
+              <p>Your concept takes form through thoughtful ideation and strategic design thinking.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Prototype</h4>
+              <p>Transform ideas into tangible user experiences with interactive prototyping.</p>
+            </div>
+          </div>
+
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Test</h4>
+              <p>We test every interaction to ensure a flawless, intuitive user experience before launch.</p>
+            </div>
+          </div>
+
+
+          <div class="feature-item">
+            <div class="tcircle-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-text">
+              <h4>Implement</h4>
+              <p>We turn your approved designs into seamless, high-performing digital experiences.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Right Column -->
+        <div class="transform-column">
+          <div class="donations-container">
+            <div class="img-wrapper">
+              <img src="./img/uiuxweb.webp" alt="plan">
+            </div>
+            <div class="donations-img">
+              <img src="./img/ios.jpeg" alt="layout" class="secondary-image">
+              <img src="./img/appd.webp" alt="design" class="third-image">
+            </div>
+            <div class="testimonial-card-one">
+              <img src="./img/quotation.png" alt="quote">
+              <p>"Crafting responsive, user-friendly, and high-performing websites that bring your digital vision to
+                life."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end -->
+
+  <!-- our services -->
+<section class="uiux-service section_padding">
+  <div class="container">
+    <h3 class="text-center ">Our Services</h3>
+    <div class="row g-4 align-items-center">
+
+      <!-- Left Cards -->
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/ui.gif">
+          <h4>UI Design</h4>
+          <p>We design intuitive, visually striking interfaces that reflect your brand identity while ensuring smooth, engaging, and consistent user experiences.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/android.gif">
+          <h4>Mobile App Design</h4>
+          <p> Create seamless, high-performing mobile designs that deliver smooth user experiences across all devices.
+            <span class="uiux-heilight">Best used when you want to highlight design craftsmanship and technical adaptability.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/prototyping.gif">
+          <h4>Prototyping & Wireframing</h4>
+          <p>High-fidelity prototypes that bring ideas to life, enabling real-time feedback, user interaction testing, and seamless experience validation throughout.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm" data-img="./img/online-learning.gif">
+          <h4>UX Research</h4>
+          <p>Elegant, user-focused designs crafted to deliver smooth interactions and lasting impressions.</p>
+        </div>
+      </div>
+
+      <!-- Middle Image -->
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="uiux-middle text-center">
+          <img id="middleImage" src="./img/ui.gif" alt="UI/UX Illustration">
+        </div>
+      </div>
+
+      <!-- Right Cards -->
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/ux.gif">
+          <h4>UX Design</h4>
+          <p>Deep analytics drive smarter, data-informed design decisions that deliver scalable, intuitive, and user-centric digital experiences.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/mobile-apps.gif">
+          <h4>Mobile App Design</h4>
+          <p>Native mobile apps designed for smooth performance, intuitive navigation, and exceptional user engagement.
+            <span class="uiux-heilight">Best used when you want to emphasize user experience quality and strategic outcomes.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm mb-4" data-img="./img/testing.gif">
+          <h4>User Testing</h4>
+          <p>Continuous user feedback drives usability improvements, ensuring every feature functions flawlessly and delivers a seamless, satisfying experience.</p>
+        </div>
+        <div class="uiux-card text-center p-2 shadow-sm" data-img="./img/layout.gif">
+          <h4>Website Redesign</h4>
+          <p>Turn your website into a powerful growth engine that engages users and drives lasting business success.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- end -->
+
+  <!-- work start -->
+  <section class="work">
+    <div class="container">
+  <h3 class="text-center">Our Work</h3>
+
+
+      <div class="carousel-container">
+        <div id="volunteeringCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#volunteeringCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#volunteeringCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#volunteeringCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#volunteeringCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#volunteeringCarousel" data-bs-slide-to="4"></button>
+          </div>
+
+          <div class="carousel-inner">
+
+             <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="story-slide">
+                <div class="story-content">
+                  <h6>Shilpakala Craft</h6>
+                  <p class="text-center">At Shilpakala Craft, every handmade creation reflects passion, culture, and the beauty of human touch. From intricate textures to artistic details, each product is thoughtfully crafted to celebrate authenticity and personal expression.</p>
+
+                  <a href="casestudy.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="story-image">
+                  <div class="image-wrapper">
+                    <img src="./img/shilpakala.webp" alt="Della Kaushik">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="story-slide">
+                <div class="story-content">
+                  <h6>Kanchenjunga Homestay</h6>
+                  <p class="text-center">Kanchenjunga Homestay offers a serene stay with breathtaking views of the majestic Kanchenjunga range. Experience warm Sikkimese hospitality, cozy rooms, and a peaceful escape into nature.</p>
+                  <a href="casestudy.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="story-image">
+                  <div class="image-wrapper">
+                    <img src="./img/kanchanjaunga.webp" alt="Rajan Sharma">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="story-slide">
+                <div class="story-content">
+                  <h6>SREEBANGI AUTOMATION</h6>
+                  <p class="text-center">At Shreebangi Automation, we transform manual systems into intelligent,
+                    automated workflows.
+                    Our innovative solutions boost productivity, accuracy, and long-term growth.</p>
+                  <a href="casestudy.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="story-image">
+                  <div class="image-wrapper">
+                    <img src="./img/homepage.1.webp" alt="Meera Patel">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="story-slide">
+                <div class="story-content">
+                  <h6>BARSHA SHILPAYAN</h6>
+                  <p class="text-center">Barsha Shilpayan – your destination for premium boutique wear.
+                    Uniquely designed outfits crafted to enhance your signature style.</p>
+                  <a href="casestudy.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="story-image">
+                  <div class="image-wrapper">
+                    <img src="./img/barshalandingpage.webp" alt="Arun Mehta">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <div class="story-slide">
+                <div class="story-content">
+                  <h6>BANGLARMISTI</h6>
+                  <p class="text-center">Banglar Misti brings the authentic taste of Bengal’s traditional sweets
+                    straight to your doorstep through a seamless e-commerce experience.
+                    We deliver freshly made, high-quality Bengali delicacies with love, purity, and unmatched flavour.
+                  </p>
+                  <a href="casestudy.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="story-image">
+                  <div class="image-wrapper">
+                    <img src="./img/banglarmisti.webp" alt="Sneha Kapoor">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#volunteeringCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#volunteeringCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- portfolio end -->
+
+<!-- testimonial -->
+ <section class="testimonial section_padding">
+  <h4 class="text-center">Client Testimonial</h4>
+<div class="container">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                 <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Krafted Tales</h3>
+                    <p class="testimonial-date">8th August 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    We chose Digital Spice Up for website and software needs; their strategy, design, and support helped Krafted Tales scale effortlessly.
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Barsha Shilpayan</h3>
+                    <p class="testimonial-date">20th August 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    Digital Spice Up delivered a fast, beautiful website showcasing our sarees, delighting customers with quality, creativity, and performance.
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <div class="testimonial-card text-center">
+                    <h3 class="testimonial-name">Kanchenjauga(View Point Homestay)</h3>
+                    <p class="testimonial-date">8th Oct 2025</p>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-check-circle verified-badge"></i>
+                    </div>
+                    <p class="testimonial-text">
+                    Professional team, seamless communication, and top-quality development gave our homestay a modern, guest-loved online presence.
+
+                    </p>
+
+                  </div>
+                </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Zero to 81</h3>
+                                <p class="testimonial-date">5th Nov 2024</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+    Digital Spice Up built our fast, modern e-commerce site and boosted revenue through effective performance marketing. Skilled, dedicated team.
+                                    
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Banglar Misti</h3>
+                                <p class="testimonial-date">3rd Dec 2024</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+   
+                                    Fantastic work by Digital Spice Up—great e-commerce for Banglar Misti, strong SEO marketing, increased brand reach, and steady business growth.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 col-sm-12">
+                            <div class="testimonial-card text-center">
+                                <h3 class="testimonial-name">Chakraborty Security Agency</h3>
+                                <p class="testimonial-date">10th june 2025</p>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-check-circle verified-badge"></i>
+                                </div>
+                                <p class="testimonial-text">
+     Digital Spice Up delivered an efficient website with strong SEO results. Responsive, knowledgeable team—truly dedicated and we’re very happy.
+                                    
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- testimonial end -->
+
+
+  <!-- faq start -->
+  <section class="faq-section ">
+    <div class="container">
+      <div class="main-faq">
+        <div class="faq-question">
+          <h1 class="faq-title">Frequently Asked Questions</h1>
+
+
+          <div class="accordion" id="faqAccordion">
+            <!-- Question 1 -->
+            <div class="accordion-item ">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  1.What makes Digital Spice Up different from other web development companies?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  At Digital Spice Up, we focus on blending creativity with cutting-edge technology. Our approach is
+                  personalized —
+                  we take the time to understand your brand’s vision, audience, and goals before designing. From modern
+                  aesthetics to seamless functionality, every project we create is built to stand out, perform
+                  efficiently, and deliver measurable results.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  2.Will my website work perfectly on mobile devices and tablets?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The timeline depends on the size and complexity of the project. On average,
+                  a standard website takes 4–6 weeks to complete, including planning, design, development, and
+                  revisions. Larger, custom-built websites may take longer — but we always keep you updated at every
+                  stage to ensure timely delivery.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  3.Do you provide SEO services along with web development?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely! Every website we build is fully responsive — meaning it adapts seamlessly to all
+                  screen sizes, including desktops, tablets, and smartphones. We also test across multiple devices to
+                  ensure optimal performance and user experience.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  4.Can I manage my website after it’s launched?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. We integrate basic on-page SEO optimization during development, such as keyword-friendly
+                  structure, meta tags, and fast page loading. For advanced SEO strategies, including content
+                  optimization and backlink building,
+                  we also offer dedicated SEO service packages.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  5.Does Digital Spice Up offer maintenance and updates after website launch?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, definitely! We build websites with easy-to-use content management systems (CMS) like WordPress or
+                  custom admin dashboards. You’ll be able to update text,
+                  images, and other content on your own — and we also provide training if needed.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  6.How much does it cost for website development?
+                  <i class="fas fa-plus"></i>
+                  <i class="fas fa-minus"></i>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+
+                  We do charge the minimum cost for website development. But not cheaper because premium quality will
+                  not come under cheaper.
+                  cost can be calculated based on the web development requirement that you have & technology that you
+                  choose.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="image-section">
+          <div class="image-container">
+            <img src="./img/faq.webp" alt="Children in need">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq end -->
+
+ <!-- logo start -->
+ 
+  <section class="logo-carousel section_padding">
+    <h6 class="title">Our Work</h6>
+    <div class="logo-wrapper">
+      <div class="logo-track">
+      <a href="casestudy.html"><img src="./img/kraftedtales.png" alt="Krafted Tales duplicate"></a>
+          <a href="casestudy.html"><img src="./img/shilpakala-logo.webp" alt="" srcset=""></a>
+          <a href="casestudy.html"><img src="./img/shraddha.png" alt="Shraddha duplicate"></a>
+          <a href="casestudy.html"><img src="./img/barsha-silpayan.png" alt="Barsha Silpayan duplicate"></a>
+          <a href="casestudy.html"><img src="./img/kanchenjunga.png" alt="Kanchenjunga duplicate"></a>
+          <a href="casestudy.html"><img src="./img/annoor.png" alt="anoor"></a>
+          <a href="casestudy.html"><img src="./img/zeroto81.png" alt="zeroto81"></a>
+          <a href="casestudy.html"><img src="./img/banglar-misti-300x300 (1).png" alt="Banglar misti"></a>
+          <a href="casestudy.html"><img src="./img/warddrobe-logo.webp" alt="warddrobe"></a>
+          <a href="casestudy.html"><img src="./img/best-automation.webp" alt="Automation"></a>
+          <a href="casestudy.html"><img src="./img/CSA-logo.webp" alt="csa"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- logo end -->
+
+
+<!-- footer end -->
+  <footer>
+    <section class="footer_section section_padding">
+      <div class="container">
+
+        <div class="row footer-row mt-5 align-items-stretch">
+
+          <div class="col-12 col-md-2 footer-col py-2">
+            <a href="#" class="footer-logo">
+              <img src="./img/digital-spiceup.webp" alt="Give Logo">
+            </a>
+            <p class="footer-tagline pb-2">
+              Empowering Brands with Digital Intelligence —
+              <span> Digital Spice Up </span> at your service.
+            </p>
+
+             
+            <a href="tel: +91 90381 20150"><i class="fa-solid fa-phone"></i> +91 90381 20150</a>
+            <a href="mailto:info@digitalspiceup.com"><i class="fa-solid fa-message"></i>info@digitalspiceup.com</a>
+
+
+            <div class="footer-social-icons">
+              <div class="social-icon-group"><a href="https://www.facebook.com/profile.php?id=61552457402967"><i
+                    class="fab fa-facebook-f"></i></a></div>
+              <div class="social-icon-group"><a href="https://digitalspiceup.com/old-site/#"><i
+                    class="fa-brands fa-pinterest"></i></a></div>
+              <div class="social-icon-group"><a
+                  href="https://www.linkedin.com/company/digital-marketing-company-in-india-digital-spiceup/?viewAsMember=true"><i
+                    class="fab fa-twitter"></i></a></div>
+              <div class="social-icon-group"><a href="https://www.instagram.com/digitalspiceup/"><i
+                    class="fab fa-instagram"></i></a></div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-3 footer-col">
+            <h4 class="footer-heading ms-5">Quick Links</h4>
+            <ul class="footer-links ms-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="casestudy.html">Case Study</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-6 col-md-3 footer-col">
+            <h4 class="footer-heading me-5">Services</h4>
+            <ul class="footer-links me-5">
+              <li><a href="web.html">Web Development</a></li>
+              <li><a href="app.html">App Development</a></li>
+              <li><a href="ui.html">UI/UX Design</a></li>
+              <li><a href="software.html">Software Development</a></li>
+              <li><a href="seo.html">Seo Marketing</a></li>
+              <li><a href="digital.html">Digital Marketing</a></li>
+              <li><a href="performance.html">Performance Marketing</a></li>
+
+            </ul>
+          </div>
+
+          <!-- Contact Form Right -->
+          <div class="col-12 col-md-4 footer-right d-flex flex-column justify-content-start">
+            <h4 class="text-white mb-3">Get in Touch</h4>
+
+            <form class="footer-contact-form w-100">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Phone" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="mb-3 flex-grow-1">
+                <textarea class="form-control h-100" rows="4" placeholder="Your Message"></textarea>
+              </div>
+              <button type="submit" class="btn text-dark w-100">Send</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- footer end -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/ui.js"></script>
+</body>
+</html>
