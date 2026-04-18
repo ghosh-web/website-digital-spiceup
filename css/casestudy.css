@@ -690,7 +690,7 @@ a {
   font-family: 'Cinzel', serif;
   font-weight: 700;
   font-size: clamp(1.3rem, 3.5vw, 1.85rem);
-  color: #3a3939;
+  color: #fffefe;
   line-height: 1.1;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
@@ -820,7 +820,7 @@ a {
   font-size: clamp(0.85rem, 2vw, 1.2rem);
   /* shrink arrow icon too */
   border-radius: 50%;
-  background: hsl(0, 0%, 100%, 0.1);
+  background: hsl(0, 0%, 100%, );
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--mid-night);
   margin: 0 auto;
