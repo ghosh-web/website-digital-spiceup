@@ -1163,7 +1163,7 @@ max-width: 320px;
   height: 10px;
   border-radius: 50%;
   background-color: #ccc;
- 
+ display: none;
 }
 
 @media (max-width: 992px) {
@@ -1673,20 +1673,11 @@ max-width: 320px;
 
 
 /* footer start */
-.ct-btn {
-  height: 40px;
-  width: 40px;
-  color: white;
-  background-color: var(--sky);
-  border: none;
-}
-
-
 
 .footer_section {
   background-color: var(--black);
   color: white;
-
+  padding: 60px 0 20px;
 }
 
 .footer-row {
@@ -1891,3 +1882,51 @@ max-width: 320px;
 }
 
 /* footer end */
+
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: var(--sky);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 2px 2px 10px  skyblue;
+}
+
+/* Show button when scrolling */
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect */
+#scrollTopBtn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+#scrollTopBtn {
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+
+/* end */

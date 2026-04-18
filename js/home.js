@@ -145,21 +145,21 @@ window.addEventListener('scroll', () => {
 
 // why choose us
 
-// document.querySelectorAll('.why-choose-us .feature-btn').forEach(btn => {
-//   btn.addEventListener('click', function () {
-//     const feature = this.querySelector('span').textContent;
-//     console.log('Selected feature:', feature);
+ document.querySelectorAll('.why-choose-us .feature-btn').forEach(btn => {
+   btn.addEventListener('click', function () {
+     const feature = this.querySelector('span').textContent;
+     console.log('Selected feature:', feature);
 
-//     // Change the left-side tagline
-//     document.getElementById('tagline').textContent = this.dataset.tagline;
+     // Change the left-side tagline
+     document.getElementById('tagline').textContent = this.dataset.tagline;
 
-//     // Button click animation
-//     this.style.transform = 'translateX(-15px) scale(0.95)';
-//     setTimeout(() => {
-//       this.style.transform = '';
-//     }, 300);
-//   });
-// });
+     // Button click animation
+     this.style.transform = 'translateX(-15px) scale(0.95)';
+     setTimeout(() => {
+       this.style.transform = '';
+     }, 300);
+   });
+ });
 
 
 
@@ -272,3 +272,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
+
+    // end
+
+    // bottom arrow
+
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Show button on scroll
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  };
+
+  // Scroll to top on click
+  scrollBtn.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+  
+  // end

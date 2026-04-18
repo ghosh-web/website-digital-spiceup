@@ -410,7 +410,7 @@ function showTab(index) {
   });
 
   // Click on center service-details -> only image changes
-  serviceDetails.addEventListener('click', () => {
+  serviceDetails?.addEventListener('click', () => {
     // get currently active item
     const activeIndex = [...serviceItems].findIndex(el => el.classList.contains('active'));
     // next item in the list (cycle)
@@ -420,3 +420,26 @@ function showTab(index) {
   });
 
 // annoor software end
+
+   // bottom arrow
+
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Show button on scroll
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  };
+
+  // Scroll to top on click
+  scrollBtn.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+  
+  // end

@@ -1485,7 +1485,7 @@ a {
 
 /* testimonial start */
 .testimonial h4 {
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 600;
   margin-bottom: 30px;
 
@@ -1856,79 +1856,6 @@ a {
 
 /* footer start */
 
-.ct-btn {
-  height: 40px;
-  width: 40px;
-  color: white;
-  background-color: var(--sky);
-  border: none;
-}
-
-.calltoaction .ct-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 22px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  z-index: 1050;
-  transition: all 0.3s ease;
-}
-
-.calltoaction .ct-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-
-.modal-dialog {
-  margin-top: 10vh;
-}
-
-.calltoaction {
-  position: relative;
-  border-radius: 20px;
-  animation: glowPulse 2s infinite ease-in-out;
-}
-
-.modal-content {
-  position: relative;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 0 15px rgba(154, 210, 240, 0.6);
-  border: 1px solid var(--sky);
-  animation: modalShadowGlow 2.5s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-@keyframes modalShadowGlow {
-  0% {
-    box-shadow:
-      0 0 10px rgba(172, 203, 236, 0.4),
-      0 0 20px rgba(152, 192, 236, 0.3),
-      0 0 30px rgba(154, 196, 241, 0.2);
-  }
-
-  50% {
-    box-shadow:
-      0 0 25px rgba(128, 185, 247, 0.8),
-      0 0 45px rgba(96, 167, 243, 0.6),
-      0 0 65px rgba(50, 145, 246, 0.5);
-  }
-
-  100% {
-    box-shadow:
-      0 0 10px rgba(103, 171, 244, 0.4),
-      0 0 20px rgba(130, 179, 231, 0.3),
-      0 0 30px rgba(160, 199, 240, 0.2);
-  }
-}
-
 .footer_section {
   background-color: var(--black);
   color: white;
@@ -2135,3 +2062,52 @@ a {
 }
 
 /* footer end */
+
+/* right arrow */
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: var(--sky);
+  color: #0f0f0f;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 2px 2px 10px  skyblue;
+}
+
+/* Show button when scrolling */
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover effect */
+#scrollTopBtn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+#scrollTopBtn {
+  animation: floatUpDown 2s infinite ease-in-out;
+}
+
+/* end */
