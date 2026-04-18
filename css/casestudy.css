@@ -536,7 +536,8 @@ a {
 
 
 .case {
-  background: linear-gradient(135deg, #84d1ed 0%, #7ec2e6 40%, #9dddf2 70%, #a7d9e2 100%);
+   /* background: linear-gradient(135deg, #addaeb 0%, #cedde5 40%, #586476 70%, #3e505b 100%);  */
+      background: rgb(243, 225, 247);  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -548,20 +549,64 @@ a {
   padding-bottom: 30px;
 }
 
-.collection-label {
+/* .collection-label {
   font-weight: 700;
   font-size: 38px;
-  padding-top: 80px;
+ 
   color: white;
   text-transform: uppercase;
-  margin-bottom: 30px;
+ 
+} */
+
+.collection-label {
+  font-size: 38px;
+  font-weight: 600;
+ margin-bottom: 30px;
+  background: linear-gradient(90deg, var(--black), var(--sky), var(--mid-night));
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite, fadeInLetters 1s ease forwards;
+  display: inline-block;
+  letter-spacing: 1px;
+  opacity: 0;
+   padding-top: 80px;
+    margin-bottom: 30px;
+}
+
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes fadeInLetters {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .main-sub {
   font-size: 16px;
   font-weight: 500;
   padding: 18px 0;
-  color: #fffefe;
+  color: var(--mid-night);
   line-height: 1.7;
   margin-bottom: 30px;
 }
@@ -633,19 +678,19 @@ a {
   width: 100%;
 }
 
-.card-number {
+/* .card-number {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: clamp(0.65rem, 1.4vw, 0.8rem);
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.65);
-}
+} */
 
 .card-title {
   font-family: 'Cinzel', serif;
   font-weight: 700;
   font-size: clamp(1.3rem, 3.5vw, 1.85rem);
-  color: #fff;
+  color: #3a3939;
   line-height: 1.1;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
@@ -775,9 +820,9 @@ a {
   font-size: clamp(0.85rem, 2vw, 1.2rem);
   /* shrink arrow icon too */
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: hsl(0, 0%, 100%, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: var(--mid-night);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -796,6 +841,7 @@ a {
 
 .nav-btn:active {
   transform: scale(0.96);
+  
 }
 
 
@@ -803,23 +849,26 @@ a {
   display: flex;
   gap: 5px;
   align-items: center;
+
 }
 
 .dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--dot);
+  background: var(--mid-night);
   cursor: pointer;
   border: none;
   padding: 0;
   transition: background 0.3s, width 0.3s, border-radius 0.3s;
+ 
 }
 
 .dot.active {
   width: 24px;
   border-radius: 4px;
-  background: var(--dot-active);
+  background: grey;
+  
 }
 
 @media (max-width: 992px){

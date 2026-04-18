@@ -1675,7 +1675,7 @@ transform: scale(1.08);
 .logo-track {
   display: flex;
   gap: 60px;
-  padding-right: 60px;
+  /* padding-right: 30px; */
 }
 
 .logo-carousel img {
@@ -1706,12 +1706,12 @@ transform: scale(1.08);
 
 .logo-carousel::before {
   left: 0;
-  background: linear-gradient(to right, white 0%, transparent 100%);
+   /* background: linear-gradient(to right, white 0%, transparent 100%); */
 }
 
 .logo-carousel::after {
   right: 0;
-  background: linear-gradient(to left, white 0%, transparent 100%);
+  /* background: linear-gradient(to left, white 0%, transparent 100%); */
 }
 
 @media (max-width: 1400px) {

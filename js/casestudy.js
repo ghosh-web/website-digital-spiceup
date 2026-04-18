@@ -145,17 +145,17 @@
 
 
   const cards = [
-    { number:"No. 01", title:"ZERO TO 81",   subtitle:"", img:"./img/zeroto81.webp", link:"zeroto81.html" },
-    { number:"No. 02", title:"CHAKRABORTY SECURITY AGENCY",    subtitle:"",       img:"./img/csa-security1 (1).webp", link:"csa.html" },
-    { number:"No. 03", title:"BANGLAR MISTI",    subtitle:"",     img:"./img/banglarmisti1.webp", link:"banglarmisti.html" },
-    { number:"No. 04", title:"SHILPAKALA CRAFT",   subtitle:"",    img:"./img/shilpakala1.webp", link:"shilpakala.html" },
-    { number:"No. 05", title:"WARDDROBE",  subtitle:"",     img:"./img/warddrobe1.webp", link:"wardrrobe.html" },
-    { number:"No. 06", title:"KRAFTED TALES",     subtitle:"",    img:"./img/kraftedtales1.webp", link:"kraftedtales.html" },
-    { number:"No. 07", title:"BARSHA SHILPAYAN",   subtitle:"",     img:"./img/barshashilpayan1.webp", link:"https://example.com/soleil" },
-    { number:"No. 08", title:"KANCHENJUNGA HOMESTAY",  subtitle:"",   img:"./img/kanchenjaunga1.webp", link:"kanchenjaunga.html" },
-    { number:"No. 09", title:"ANNOOR",    subtitle:"",    img:"./img/annoor1.webp", link:"annoor.html" },
-    { number:"No. 10", title:"PATCO TECH",     subtitle:"",      img:"./img/patco1.webp", link:"patco.html" },
-        { number:"No. 11", title:"SREEBANGI AUTOMATION",     subtitle:"",      img:"./img/sautomation.webp", link:"sreebangi.html" },
+    { number:"", title:"ZERO TO 81",   subtitle:"", img:"./img/zeroto81.webp", link:"zeroto81.html" },
+    { number:"", title:"CHAKRABORTY SECURITY AGENCY",    subtitle:"",       img:"./img/csa-security1 (1).webp", link:"csa.html" },
+    { number:"", title:"BANGLAR MISTI",    subtitle:"",     img:"./img/banglarmisti1.webp", link:"banglarmisti.html" },
+    { number:"", title:"SHILPAKALA CRAFT",   subtitle:"",    img:"./img/shilpakala1.webp", link:"shilpakala.html" },
+    { number:"", title:"WARDDROBE",  subtitle:"",     img:"./img/warddrobe1.webp", link:"wardrrobe.html" },
+    { number:"", title:"KRAFTED TALES",     subtitle:"",    img:"./img/kraftedtales1.webp", link:"kraftedtales.html" },
+    { number:"", title:"BARSHA SHILPAYAN",   subtitle:"",     img:"./img/barshashilpayan1.webp", link:"https://example.com/soleil" },
+    { number:"", title:"KANCHENJUNGA HOMESTAY",  subtitle:"",   img:"./img/kanchenjaunga1.webp", link:"kanchenjaunga.html" },
+    { number:"", title:"ANNOOR",    subtitle:"",    img:"./img/annoor1.webp", link:"annoor.html" },
+    { number:"", title:"PATCO TECH",     subtitle:"",      img:"./img/patco1.webp", link:"patco.html" },
+        { number:"", title:"SREEBANGI AUTOMATION",     subtitle:"",      img:"./img/sautomation.webp", link:"sreebangi.html" },
   ];
 
   let current = 2;

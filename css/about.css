@@ -1548,7 +1548,7 @@ a {
 .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -1698,7 +1698,7 @@ a {
 /* logo */
 
 .logo-carousel {
-  background: #fff;
+
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
@@ -1751,12 +1751,12 @@ a {
 
 .logo-carousel::before {
   left: 0;
-  background: linear-gradient(to right, white 0%, transparent 100%);
+  /* background: linear-gradient(to right, white 0%, transparent 100%); */
 }
 
 .logo-carousel::after {
   right: 0;
-  background: linear-gradient(to left, white 0%, transparent 100%);
+  /* background: linear-gradient(to left, white 0%, transparent 100%); */
 }
 
 
